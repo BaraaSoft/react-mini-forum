@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 /**** wiring up redux ****/
@@ -10,28 +9,17 @@ import reducers from './reducers/index';
 import ReduxPromise from 'redux-promise';
 /* React Router */
 import { BrowserRouter, Route } from 'react-router-dom';
+//other
+import PostIndex from './containers/post_index';
 
-class Hello extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        return (<h2>Hello!</h2>);
-    }
-}
-class Goodbye extends React.Component {
-    render() {
-        return <h2>Goodbye ;)</h2>
-    }
-}
+
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
             <div>
-                <Route path="/hello" component={Hello} />
-                <Route path="/goodbye" component={Goodbye} />
+                <Route path="/" component={PostIndex} />
             </div>
         </BrowserRouter>
     </Provider>
