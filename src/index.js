@@ -8,9 +8,16 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers/index';
 import ReduxPromise from 'redux-promise';
 /* React Router */
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+//style
+import './style/vendors/css/grid.css'
+import './style/vendors/css/ionicons.min.css'
+import './style/vendors/css/normalize.css'
+import './style/resources/css/style.css'
 //other
 import PostIndex from './containers/post_index';
+import PostNew from './containers/post_new';
+import Header from './containers/post_header'
 
 
 
@@ -19,7 +26,11 @@ ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
             <div>
-                <Route path="/" component={PostIndex} />
+                <Header />
+                <Switch>
+                    <Route path="/posts/new" component={PostNew} />
+                    <Route path="/" component={PostIndex} />
+                </Switch>
             </div>
         </BrowserRouter>
     </Provider>
@@ -29,3 +40,8 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+//     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+//         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+//             <link rel="stylesheet" type="text/css" href="resources/css/style.css">

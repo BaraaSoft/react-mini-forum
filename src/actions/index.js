@@ -4,6 +4,7 @@ const BASE_URL = 'http://reduxblog.herokuapp.com';
 const API_KEY = 'PAPERCLIP1234';
 
 export const FETCH_POSTS = 'FETCH_POSTS';
+export const NEW_POST = 'NEW_POST';
 
 export function fetchPosts() {
     let url = `${BASE_URL}/api/posts`
@@ -17,3 +18,9 @@ export function fetchPosts() {
         payload: request
     }
 }
+
+export function addNewPost(post) {
+
+}
+
+

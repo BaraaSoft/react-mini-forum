@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fff;
+    color:#555;
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/*****************************************/
+/**************   reusable  ****************/
+/*****************************************/
+
+section{
+    padding: 80px 0;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.box{
+    padding: 1%;
+}
+
+.clearfix{
+    zoom: 1;
+}
+.clearfix::after{
+    content: ".";
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+    display: block;
+}
+
+/**************   typography  ****************/
+
+h1,h2{
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+h1{
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 240%;
+}
+h2{
+    letter-spacing: 1px;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+h2::after{
+    display: block;
+    height: 1px;
+    background-color: #e67e22;
+    content: "";
+    width: 100px;
+    margin: 30px auto;
+}
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin: 0 15%;
+}
+
+.box p {
+    line-height: 145%;
+    font-size: 90%;
+
+}
+/**************   Icons  ****************/
+.big-icon{
+    display: block;
+    margin: 10px;
+    font-size: 100%;
+    color: #e67e22;
+}
+/**************   Botton  ****************/
+
+.btn:link,.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s,text-color 0.2s;
+}
+
+.btn:hover,.btn:active{
+    background-color: #d3721c;
+    color:#fff;
+}
+
+.btn-full{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color:#fff;
+    margin-right: 15px;
+}
+
+.btn-ghost{
+    background-color:transparent;
+    border: 1px solid #e67e22;
+    color:#e67e22;
+}
+
+.btn-square{
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+
+    padding: 10px 30px;
+    border-radius: 3px;
+    border: 1px #e67e22 solid;
+    color:#e67e22;
+    transition: all .2s;
+    text-transform: uppercase;
+}
+.btn-square:hover{
+    background-color: #e67e22; 
+    color:#fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.btn-square-small{
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 1px;
+    border: 2px linear-gradient(90deg,#16222A,#3A6073) solid;
+    color: #fff;
+    transition: all .2s;
+    text-transform: capitalize;
+    font-size: 70%;
+    background:linear-gradient(180deg,#16222A,#3A6073);
+    text-transform: uppercase;
+}
+
+.btn-square-small:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border:1px rgba(255, 255, 255, 0) solid;
+}
+/*****************************************/
+/**************   Header  ****************/
+/*****************************************/
+
+
+/**************   Jumbotron  ****************/
+header{
+    background-image:linear-gradient(90deg,#16222A,#3A6073);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/**************   Navbar  ****************/
+
+header > nav{
+    padding-top:20px;
+    padding-bottom:20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.logo{
+    float: left;
+    height: 60px;
+    width: auto;
+    margin-left: 2%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px rgba(255, 255, 255, 0.438) solid;
+}
+.main-nav{
+    float: right;
+    list-style: none; 
+    margin-top: 10px;
+    margin-right: 2%;
+}
+
+/*****************************************/
+/******* Horizontal scroll section *******/
+/*****************************************/
+.box-scroll{
+    height: 50px;
+    background-color: #555;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.box-scroll::-webkit-scrollbar{
+    display: none;
+}
+.box-scroll > *{
+    display: inline-block;
+}
+
+/*****************************************/
+/************** Card section *************/
+/*****************************************/
+.col:first-child{
+     margin-left: 2%;
+}
+/**** reusable****/
+.card{
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: 0.3s;
+    height: 300px;
+
+    width: 40%;
+    margin: 4% 2%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card p{
+    padding: 16px;
+}
+
+.card .top{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+   background-image:linear-gradient(90deg,#16222A,#3A6073); 
+   height: 40%;
+   position: relative;
+}
+.card .title {
+    color: #fff;
+    font-size: 120%;
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);  
+    overflow: hidden;
+}
+
+.card .middle{
+    border-bottom: 1px solid rgb(211, 211, 211);
+    height:40%;
+}
+
+.card .middle > p{
+    font-size: 90%;
+}
+
+.card .bottom{
+    height: 20%;
+}
+
+.card .bottom a {
+    margin: 2%;
+}
+
+
+.card .category{
+    width: 100%;
+    padding: 8px 8px;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+
+    height: 40px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    border-top: 1px rgba(255, 255, 255, 0.096) solid;
+
+    background: linear-gradient(90deg,#16222A,#3A6073); 
+}
+.card .category::-webkit-scrollbar{
+    display: none;
+}
+.card .category > *{
+    display: inline-block;
+}
+
+.card .category a{
+    display: inline-block;
+    border: 1px solid #e67e22;
+    padding: 3px 9px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #e67e22;
+    font-size: 60%;
+    transition: all .2s;
+    margin-left: 8px;
+    float: left;
+}
+.card .category a:hover{
+    background-color: #d3721c;
+    color:#fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*** Different material design cards style ***/
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+
+
+
+
+
