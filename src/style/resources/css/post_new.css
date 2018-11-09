@@ -1,0 +1,141 @@
+.form-layout{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 30px auto;
+    min-height: 350px;
+    text-align: center;
+}
+
+.form-layout > form{
+    display: inline-block;
+    width: 50%;
+}
+
+
+
+/***** Form Fields *****/
+
+/* Input Flying Label Style */
+.form-layout .form-group {
+    position: relative;
+    padding-top: 1.5rem;
+    margin-top: 12px;
+}
+
+.form-layout label {
+    color: #e67e22;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 90% ;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+.form-layout input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.form-layout input::placeholder{
+    font-size: 90%;
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    color: #a8a7a7;
+}
+/* Glowing Input */
+.form-layout input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+.form-layout input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #e67e22;
+  /* padding: 3px 0px 3px 3px; */
+  padding: 15px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #e67e22;
+}
+
+/* default form style */
+.form-layout input[type=text],.form-layout textarea{
+    padding: 15px;
+    width:100%;
+    color:#555;
+    font-weight: 300;
+    font-size: 90%;
+}
+.form-layout label{
+  padding-left:10px;  
+}
+/* Error */
+
+.error-text{
+    color: #f14a17;
+    position: absolute;
+    left: 0;
+    font-size: 80% ;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+
+    font-size: 70%;
+    padding-left: 7px;
+}
+
+
+.error-input{
+  box-shadow: 0 0 5px #f14a17;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #f14a17;
+}
+
+/* My Cutsom style */
+
+.form-layout textarea::placeholder{
+    font-size: 90%;
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    color: #a8a7a7;
+}
+
+/* fixing the position of error message for textarea */
+.form-layout .form-group:last-of-type{
+    margin: 36px 0;
+    overflow: auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* form button */
+
+.btn-squre-full {
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 1px;
+    border: 2px #e67e22 solid;
+    color: #fff;
+    transition: all .2s;
+    text-transform: capitalize;
+    font-size: 70%;
+    background:#e67e22;
+    text-transform: uppercase;
+
+    margin:26px 12px;
+    width: 25%;
+    border-radius: 3px;
+}
+
+.btn-squre-full:hover{
+    border: 2px #da751e solid;
+    background: #da751e;
+}

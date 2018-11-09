@@ -18,6 +18,7 @@ import './style/resources/css/style.css'
 import PostIndex from './containers/post_index';
 import PostNew from './containers/post_new';
 import Header from './containers/post_header'
+import PostShow from './containers/post_show';
 
 
 
@@ -29,6 +30,7 @@ ReactDOM.render(
                 <Header />
                 <Switch>
                     <Route path="/posts/new" component={PostNew} />
+                    <Route path="/posts/:id" component={PostShow} />
                     <Route path="/" component={PostIndex} />
                 </Switch>
             </div>
