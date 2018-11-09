@@ -1,0 +1,65 @@
+.show-post{
+    
+}
+.show-post h2 {
+    padding-top: 24px;
+    font-size: 120%;
+}
+
+.show-post .content{
+    width: 60%;
+    margin: 54px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.show-post .categories{
+    background:rgba(245, 245, 245, 0.801);
+    height: 80px;
+}
+
+
+.show-post .box-scroll{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.show-post .box-scroll::-webkit-scrollbar{
+    display: none;
+}
+.show-post .box-scroll > *{
+    display: inline-block;
+}
+
+/* form item category */
+
+
+
+.show-post .btn-squre-full {
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 1px;
+    border: 1px #e67e22 solid;
+    color: #e67e22;
+    transition: all .2s;
+    font-size: 70%;
+    text-transform: uppercase;
+    background: transparent;
+    text-align: center;
+}
+
+.show-post .btn-squre-full:hover{
+    border: 1px #da751e solid;
+}
+
+/* text content */
+
+.show-post .text{
+     padding: 5%;
+} 
+.show-post .text p {
+    text-align: justify;
+    text-justify: inter-word;
+}
