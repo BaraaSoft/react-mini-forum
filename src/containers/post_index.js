@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/index';
+import { Link } from 'react-router-dom';
 
 
 
@@ -35,14 +36,13 @@ class PostIndex extends Component {
                     <p>{post.content}</p>
                 </div>
                 <div className="bottom">
-                    <a className="btn-square-small" href="#">More</a>
+                    <Link to={`/posts/${post.id}`} className="btn-square-small">More</Link>
                 </div>
             </div>
         );
     }
 
     render() {
-        console.log(this.props.posts)
         return (
             <section className="section-feature">
                 <div className="row">

@@ -12,22 +12,32 @@ import { Link } from 'react-router-dom';
 class PostShow extends Component {
 
     componentDidMount() {
-        const { params } = this.props.match.params;
-        this.props.fetchSinglePost(297744);
+        const { params } = this.props.match;
+        this.props.fetchSinglePost(params.id);
     }
     render() {
-        const { post } = this.props
+
+        const post = this.props.post.filter((data) => {
+            return data.id.toString() === this.props.match.params.id.toString()
+        })[0];
+        console.log("PostShow:")
+        console.log(this.props.post)
+        console.log(`id ${this.props.match.params.id}`)
+
+        if (!post) {
+            return (<h2>Not Found!</h2>)
+        }
         return (
             <div className="row show-post">
                 <div className="content">
                     <h2>{post.title}</h2>
-                    <div className="categories box-scroll">
-                        <a href="#" className="btn-squre-full">{post.categories}</a>
-                    </div>
                     <div className="text">
                         <p>
                             {post.content}
                         </p>
+                    </div>
+                    <div className="categories box-scroll">
+                        <a href="#" className="btn-squre-full">{post.categories}</a>
                     </div>
                 </div>
             </div>

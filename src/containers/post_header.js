@@ -7,7 +7,9 @@ export default (props) => {
         <header>
             <nav>
                 <div className="row">
-                    <img src={logo} alt="Foodish" className="logo" />
+                    <Link to="/">
+                        <img src={logo} alt="Foodish" className="logo" />
+                    </Link>
                     <div className="main-nav">
                         <Link className="btn-square" to="/posts/new">New Post</Link>
                     </div>
